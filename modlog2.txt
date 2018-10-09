@@ -1,0 +1,1143 @@
+ldr builtins.len 1
+ldr builtins.len !
+PyExZ3 (Python Exploration with Z3)
+Exploring mod.mod
+ldr self :  {'app': <module 'mod' from '/mnt/hgfs/PyExZ3P/test/mod.py'>, '_fileName': 'mod', '_entryPoint': 'mod'}
+ldr argspec :  ArgSpec(args=['x', 'y'], varargs=None, keywords=None, defaults=None)
+ldr func.__dict__ :  {}
+ldr _initializeArgumentSymbolic ok
+ldr _initializeArgumentSymbolic ok
+ldr inv :  {'initial_value': {'y': 0, 'x': 0}, 'function': <bound method Loader._execute of <symbolic.loader.Loader object at 0x7f184cca13c8>>, 'arg_constructor': {'y': <function Loader._initializeArgumentSymbolic.<locals>.<lambda> at 0x7f184cca8158>, 'x': <function Loader._initializeArgumentSymbolic.<locals>.<lambda> at 0x7f184cca80d0>}, 'reset': <bound method Loader._resetCallback of <symbolic.loader.Loader object at 0x7f184cca13c8>>}
+epl funcinv :  {'initial_value': {'y': 0, 'x': 0}, 'function': <bound method Loader._execute of <symbolic.loader.Loader object at 0x7f184cca13c8>>, 'arg_constructor': {'y': <function Loader._initializeArgumentSymbolic.<locals>.<lambda> at 0x7f184cca8158>, 'x': <function Loader._initializeArgumentSymbolic.<locals>.<lambda> at 0x7f184cca80d0>}, 'reset': <bound method Loader._resetCallback of <symbolic.loader.Loader object at 0x7f184cca13c8>>}
+epl before funcinv :  {'initial_value': {'y': 0, 'x': 0}, 'function': <bound method Loader._execute of <symbolic.loader.Loader object at 0x7f184cca13c8>>, 'arg_constructor': {'y': <function Loader._initializeArgumentSymbolic.<locals>.<lambda> at 0x7f184cca8158>, 'x': <function Loader._initializeArgumentSymbolic.<locals>.<lambda> at 0x7f184cca80d0>}, 'reset': <bound method Loader._resetCallback of <symbolic.loader.Loader object at 0x7f184cca13c8>>}
+epl n :  y
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+epl self.symbolic_inputs[n] :  0
+epl n :  x
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+epl self.symbolic_inputs[n] :  0
+epl after funcinv :  {'initial_value': {'y': 0, 'x': 0}, 'function': <bound method Loader._execute of <symbolic.loader.Loader object at 0x7f184cca13c8>>, 'arg_constructor': {'y': <function Loader._initializeArgumentSymbolic.<locals>.<lambda> at 0x7f184cca8158>, 'x': <function Loader._initializeArgumentSymbolic.<locals>.<lambda> at 0x7f184cca80d0>}, 'reset': <bound method Loader._resetCallback of <symbolic.loader.Loader object at 0x7f184cca13c8>>}
+epl self.path :  {'constraints': {}, 'expected_path': None, 'add': <function ExplorationEngine.__init__.<locals>.<lambda> at 0x7f184cca81e0>, 'root_constraint': None (processed: False), 'current_constraint': None (processed: False)}
+epl explore() start !
+_oneExecution start !
+[1;31;40m [('y', 0), ('x', 0)] [0m
+epl oneexecution self.path :  {'constraints': {}, 'expected_path': None, 'add': <function ExplorationEngine.__init__.<locals>.<lambda> at 0x7f184cca81e0>, 'root_constraint': None (processed: False), 'current_constraint': None (processed: False)}
+epl oneexecution self.symbolic_inputs :  {'y': 0, 'x': 0}
+inv self.function :  {}
+inv args :  {'y': 0, 'x': 0}
+inv callfunction end1
+ldr self._entryPoint mod
+ldr args {'y': 0, 'x': 0}
+ldr self.app.__dict__[self.entryPoint] <function mod at 0x7f184cca82f0>
+symty _do_sexpr
+symty _do_sexpr fun :  <function SymbolicObject.__gt__.<locals>.<lambda> at 0x7f184cca8268>
+symty _do_sexpr self :  {'name': 'y', 'val': 0, 'expr': None}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+ptc whichbranch start
+ptc branch :  False
+ptc symbolic_type :  0
+ptc p :  {'symtype': 0, 'result': False}
+ptc p.negate() :  {'symtype': 0, 'result': True}
+ptc p.negate().negate() :  (> y#0, 0) (False)
+ptc c :  None
+ptc cneg :  None
+ptc c is None
+New constraint: (> y#0, 0) (False)  (processed: False, path_len: 1)
+epl cjh constraint :  (> y#0, 0) (False)  (processed: False, path_len: 1)
+ptc whichbranch start
+ptc branch :  False
+ptc symbolic_type :  0
+ptc p :  {'symtype': 0, 'result': False}
+ptc p.negate() :  {'symtype': 0, 'result': True}
+ptc p.negate().negate() :  (> y#0, 0) (False)
+ptc c :  None
+ptc cneg :  None
+ptc c is None
+New constraint: (> y#0, 0) (False)  (processed: False, path_len: 2)
+epl cjh constraint :  (> y#0, 0) (False)  (processed: False, path_len: 2)
+ldr tmp :  1
+inv tmp :  1
+[1;31;40m 1 [0m
+_oneExecution end !
+epl selected :  (> y#0, 0) (False)  (processed: False, path_len: 1)
+epl CJH2
+epl Selected constraint (> y#0, 0) (False)  (processed: False, path_len: 1)
+epl cjh2
+cst parent :  None  (processed: False, path_len: 0)
+cst asserts :  []
+cst predicate :  (> y#0, 0) (False)
+z3w findCounterexample start
+[1;32;40m z3w findmodel start [0m
+z3w use_lia True
+exp self.__dict__ {'z3_vars': {}}
+z3w z3_expr :  {'z3_vars': {}}
+z3w asserts :  []
+z3w query :  (> y#0, 0) (False)
+exp pred :  {'symtype': 0, 'result': False}
+exp env :  None
+exp init expr :  0
+exp env :  None
+exp init expr :  ['>', 0, 0]
+exp init expr list :  <class 'list'>
+exp init op :  >
+>
+0
+0
+exp env :  None
+exp init expr :  0
+exp name :  y
+z3int _variable
+exp name self._variable(name,solver) :  y
+z3int _variable
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  0
+z3int _constant
+exp op :  >
+exp args :  [y, 0]
+z3int _constant
+z3int _constant
+exp tmp== :  If(0 < y, 1, 0)
+exp init sym_expr :  If(0 < y, 1, 0)
+z3int _constant
+exp final sym_expr :  Not(0 != If(0 < y, 1, 0))
+exp predtoz3 solver :  []
+exp toz3 solver :  [Not(Not(0 != If(0 < y, 1, 0)))]
+z3w res :  sat
+[1;31;40m z3w findmodel2 start [0m
+[1;31;40m Z3BITVECTOR [0m
+exp self.__dict__ {'z3_vars': {}}
+zw3 z3bitvector z3_expr :  {'N': 32, 'z3_vars': {}}
+exp pred :  {'symtype': 0, 'result': False}
+exp env :  None
+exp init expr :  0
+exp env :  None
+exp init expr :  ['>', 0, 0]
+exp init expr list :  <class 'list'>
+exp init op :  >
+>
+0
+0
+exp env :  None
+exp init expr :  0
+exp name :  y
+exp name self._variable(name,solver) :  y
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  0
+exp op :  >
+exp args :  [y, 0]
+exp tmp== :  If(0 < y, 1, 0)
+exp init sym_expr :  If(0 < y, 1, 0)
+exp final sym_expr :  Not(0 != If(0 < y, 1, 0))
+exp predtoz3 solver :  []
+exp toz3 solver :  [Not(Not(0 != If(0 < y, 1, 0)))]
+zw3 toz3 asserts query :  [] (> y#0, 0) (False)
+zw3 toz3 z3_expr :  {'N': 32, 'z3_vars': {'y': y}}
+z3w res :  sat
+[1;31;40m z3w z3 getModel start !!!!!!!!!!!!!!!!!!!! [0m
+{'asserts': [], 'bound': 15, 'query': (> y#0, 0) (False), 'use_lia': True, 'solver': [Not(Not(0 != If(0 < y, 1, 0))),
+ And(15 >= y, 4294967280 <= y)], 'N': 32, 'z3_expr': <symbolic.z3_expr.bitvector.Z3BitVector object at 0x7f184ccb0a90>}
+{'N': 32, 'z3_vars': {'y': y}}
+z3w model :  {'model': <Model object at 0x7f18507822f0>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w model.model {}
+z3w model.ctx {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w model.ctx.ctx {}
+z3w model.ctx.eh {}
+z3w name :  y
+z3w self.z3_expr.z3_vars[name] :  {'ast': <Ast object at 0x7f184cca8510>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  2
+z3w res :  {'y': 2}
+[1;31;40m z3w z3 getModel end !!!!!!!!!!!!!!!!!!!! [0m
+z3w model :  {'y': 2}
+z3w flag not mismatch
+exp pred :  {'symtype': 0, 'result': False}
+exp env :  {'y': 2}
+exp init expr :  0
+exp env :  {'y': 2}
+exp init expr :  ['>', 0, 0]
+exp init expr list :  <class 'list'>
+exp init op :  >
+>
+0
+0
+exp env :  {'y': 2}
+exp init expr :  0
+exp env :  {'y': 2}
+exp init expr :  0
+exp op :  >
+exp args :  [2, 0]
+exp init sym_expr :  True
+exp final sym_expr :  False
+exp predtoz3 solver :  [Not(Not(0 != If(0 < y, 1, 0)))]
+z3w tmp :  False
+z3w mismatch False
+[1;31;40m z3w findmodel2 end1 [0m
+z3w ret,mismatch :  (sat, False)
+[1;31;40m z3w z3 getModel start !!!!!!!!!!!!!!!!!!!! [0m
+{'asserts': [], 'bound': 15, 'query': (> y#0, 0) (False), 'use_lia': True, 'solver': [Not(Not(0 != If(0 < y, 1, 0)))], 'N': 32, 'z3_expr': <symbolic.z3_expr.bitvector.Z3BitVector object at 0x7f184ccb0a90>}
+{'N': 32, 'z3_vars': {'y': y}}
+z3w model :  {'model': <Model object at 0x7f1852166048>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w model.model {}
+z3w model.ctx {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w model.ctx.ctx {}
+z3w model.ctx.eh {}
+z3w name :  y
+z3w self.z3_expr.z3_vars[name] :  {'ast': <Ast object at 0x7f184cca8510>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  2
+z3w res :  {'y': 2}
+[1;31;40m z3w z3 getModel end !!!!!!!!!!!!!!!!!!!! [0m
+z3w res1 :  {'y': 2}
+[1;32;40m z3w findmodel end [0m
+z3w flag 11111111111111111111111
+z3w Query -- (> y#0, 0) (False)
+z3w Asserts -- []
+z3w Cone -- []
+z3w Result -- {'y': 2}
+z3w res :  {'y': 2}
+z3w findCounterexample end
+epl asserts :  []
+epl query :  (> y#0, 0) (False)
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+_oneExecution start !
+[1;31;40m [('y', 2), ('x', 0)] [0m
+epl oneexecution self.path :  {'constraints': {}, 'expected_path': [(> y#0, 0) (False)], 'add': <function ExplorationEngine.__init__.<locals>.<lambda> at 0x7f184cca81e0>, 'root_constraint': None (processed: False), 'current_constraint': None (processed: False)}
+epl oneexecution self.symbolic_inputs :  {'y': 2, 'x': 0}
+inv self.function :  {}
+inv args :  {'y': 2, 'x': 0}
+inv callfunction end1
+ldr self._entryPoint mod
+ldr args {'y': 2, 'x': 0}
+ldr self.app.__dict__[self.entryPoint] <function mod at 0x7f1852166048>
+symty _do_sexpr
+symty _do_sexpr fun :  <function SymbolicObject.__gt__.<locals>.<lambda> at 0x7f18507822f0>
+symty _do_sexpr self :  {'name': 'y', 'val': 2, 'expr': None}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+ptc whichbranch start
+ptc branch :  True
+ptc symbolic_type :  1
+ptc p :  {'symtype': 1, 'result': True}
+ptc p.negate() :  {'symtype': 1, 'result': False}
+ptc p.negate().negate() :  (> y#2, 0) (True)
+ptc c :  None
+ptc cneg :  (> y#0, 0) (False)  (processed: True, path_len: 1)
+ptc c is None
+New constraint: (> y#2, 0) (True)  (processed: False, path_len: 1)
+epl cjh constraint :  (> y#2, 0) (True)  (processed: False, path_len: 1)
+symty _do_sexpr
+symty _do_sexpr fun :  <function SymbolicObject.__lt__.<locals>.<lambda> at 0x7f18507822f0>
+symty _do_sexpr self :  {'name': 'y', 'val': 2, 'expr': None}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+ptc whichbranch start
+ptc branch :  True
+ptc symbolic_type :  1
+ptc p :  {'symtype': 1, 'result': True}
+ptc p.negate() :  {'symtype': 1, 'result': False}
+ptc p.negate().negate() :  (< y#2, 10) (True)
+ptc c :  None
+ptc cneg :  None
+ptc c is None
+New constraint: (< y#2, 10) (True)  (processed: False, path_len: 2)
+epl cjh constraint :  (< y#2, 10) (True)  (processed: False, path_len: 2)
+symty _do_sexpr
+symty _do_sexpr fun :  <function __add__.<locals>.<lambda> at 0x7f18507822f0>
+symty _do_sexpr self :  {'name': 'y', 'val': 2, 'expr': None}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+symty _do_sexpr
+symty _do_sexpr fun :  <function __mod__.<locals>.<lambda> at 0x7f18507822f0>
+symty _do_sexpr self :  {'name': 'x', 'val': 0, 'expr': None}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+symty _do_sexpr
+symty _do_sexpr fun :  <function SymbolicObject.__eq__.<locals>.<lambda> at 0x7f18507822f0>
+symty _do_sexpr self :  {'name': 'se', 'val': 0, 'expr': ['%', 0, ['+', 2, 1]]}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+ptc whichbranch start
+ptc branch :  False
+ptc symbolic_type :  0
+ptc p :  {'symtype': 0, 'result': False}
+ptc p.negate() :  {'symtype': 0, 'result': True}
+ptc p.negate().negate() :  (== (% x#0, (+ y#2, 1)), 3) (False)
+ptc c :  None
+ptc cneg :  None
+ptc c is None
+New constraint: (== (% x#0, (+ y#2, 1)), 3) (False)  (processed: False, path_len: 3)
+epl cjh constraint :  (== (% x#0, (+ y#2, 1)), 3) (False)  (processed: False, path_len: 3)
+ldr tmp :  1
+inv tmp :  1
+[1;31;40m 1 [0m
+_oneExecution end !
+iterations :  2
+epl selected :  (> y#0, 0) (False)  (processed: False, path_len: 2)
+epl CJH2
+epl Selected constraint (> y#0, 0) (False)  (processed: False, path_len: 2)
+epl cjh2
+cst parent :  (> y#0, 0) (False)  (processed: True, path_len: 1)
+cst asserts :  [(> y#0, 0) (False)]
+cst predicate :  (> y#0, 0) (False)
+z3w findCounterexample start
+[1;32;40m z3w findmodel start [0m
+z3w use_lia True
+exp self.__dict__ {'z3_vars': {}}
+z3w z3_expr :  {'z3_vars': {}}
+z3w asserts :  [(> y#0, 0) (False)]
+z3w query :  (> y#0, 0) (False)
+exp pred :  {'symtype': 0, 'result': False}
+exp env :  None
+exp init expr :  0
+exp env :  None
+exp init expr :  ['>', 0, 0]
+exp init expr list :  <class 'list'>
+exp init op :  >
+>
+0
+0
+exp env :  None
+exp init expr :  0
+exp name :  y
+z3int _variable
+exp name self._variable(name,solver) :  y
+z3int _variable
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  0
+z3int _constant
+exp op :  >
+exp args :  [y, 0]
+z3int _constant
+z3int _constant
+exp tmp== :  If(0 < y, 1, 0)
+exp init sym_expr :  If(0 < y, 1, 0)
+z3int _constant
+exp final sym_expr :  Not(0 != If(0 < y, 1, 0))
+exp predtoz3 solver :  []
+exp pred :  {'symtype': 0, 'result': False}
+exp env :  None
+exp init expr :  0
+exp env :  None
+exp init expr :  ['>', 0, 0]
+exp init expr list :  <class 'list'>
+exp init op :  >
+>
+0
+0
+exp env :  None
+exp init expr :  0
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  0
+z3int _constant
+exp op :  >
+exp args :  [y, 0]
+z3int _constant
+z3int _constant
+exp tmp== :  If(0 < y, 1, 0)
+exp init sym_expr :  If(0 < y, 1, 0)
+z3int _constant
+exp final sym_expr :  Not(0 != If(0 < y, 1, 0))
+exp predtoz3 solver :  [Not(0 != If(0 < y, 1, 0))]
+exp toz3 solver :  [Not(0 != If(0 < y, 1, 0)), Not(Not(0 != If(0 < y, 1, 0)))]
+z3w res :  unsat
+[1;32;40m z3w findmodel end [0m
+z3w flag 11111111111111111111111
+z3w Query -- (> y#0, 0) (False)
+z3w Asserts -- [(> y#0, 0) (False)]
+z3w Cone -- [(> y#0, 0) (False)]
+z3w Result -- None
+z3w res :  None
+z3w findCounterexample end
+epl asserts :  [(> y#0, 0) (False)]
+epl query :  (> y#0, 0) (False)
+epl selected :  (> y#2, 0) (True)  (processed: True, path_len: 1)
+epl selected :  (< y#2, 10) (True)  (processed: False, path_len: 2)
+epl CJH2
+epl Selected constraint (< y#2, 10) (True)  (processed: False, path_len: 2)
+epl cjh2
+cst parent :  (> y#2, 0) (True)  (processed: True, path_len: 1)
+cst asserts :  [(> y#2, 0) (True)]
+cst predicate :  (< y#2, 10) (True)
+z3w findCounterexample start
+[1;32;40m z3w findmodel start [0m
+z3w use_lia True
+exp self.__dict__ {'z3_vars': {}}
+z3w z3_expr :  {'z3_vars': {}}
+z3w asserts :  [(> y#2, 0) (True)]
+z3w query :  (< y#2, 10) (True)
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  None
+exp init expr :  1
+exp env :  None
+exp init expr :  ['>', 2, 0]
+exp init expr list :  <class 'list'>
+exp init op :  >
+>
+2
+0
+exp env :  None
+exp init expr :  2
+exp name :  y
+z3int _variable
+exp name self._variable(name,solver) :  y
+z3int _variable
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  0
+z3int _constant
+exp op :  >
+exp args :  [y, 0]
+z3int _constant
+z3int _constant
+exp tmp== :  If(0 < y, 1, 0)
+exp init sym_expr :  If(0 < y, 1, 0)
+z3int _constant
+exp final sym_expr :  0 != If(0 < y, 1, 0)
+exp predtoz3 solver :  []
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  None
+exp init expr :  1
+exp env :  None
+exp init expr :  ['<', 2, 10]
+exp init expr list :  <class 'list'>
+exp init op :  <
+<
+2
+10
+exp env :  None
+exp init expr :  2
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  10
+z3int _constant
+exp op :  <
+exp args :  [y, 10]
+z3int _constant
+z3int _constant
+exp tmp== :  If(10 > y, 1, 0)
+exp init sym_expr :  If(10 > y, 1, 0)
+z3int _constant
+exp final sym_expr :  0 != If(10 > y, 1, 0)
+exp predtoz3 solver :  [0 != If(0 < y, 1, 0)]
+exp toz3 solver :  [0 != If(0 < y, 1, 0), Not(0 != If(10 > y, 1, 0))]
+z3w res :  sat
+[1;31;40m z3w findmodel2 start [0m
+[1;31;40m Z3BITVECTOR [0m
+exp self.__dict__ {'z3_vars': {}}
+zw3 z3bitvector z3_expr :  {'N': 32, 'z3_vars': {}}
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  None
+exp init expr :  1
+exp env :  None
+exp init expr :  ['>', 2, 0]
+exp init expr list :  <class 'list'>
+exp init op :  >
+>
+2
+0
+exp env :  None
+exp init expr :  2
+exp name :  y
+exp name self._variable(name,solver) :  y
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  0
+exp op :  >
+exp args :  [y, 0]
+exp tmp== :  If(0 < y, 1, 0)
+exp init sym_expr :  If(0 < y, 1, 0)
+exp final sym_expr :  0 != If(0 < y, 1, 0)
+exp predtoz3 solver :  []
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  None
+exp init expr :  1
+exp env :  None
+exp init expr :  ['<', 2, 10]
+exp init expr list :  <class 'list'>
+exp init op :  <
+<
+2
+10
+exp env :  None
+exp init expr :  2
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  10
+exp op :  <
+exp args :  [y, 10]
+exp tmp== :  If(10 > y, 1, 0)
+exp init sym_expr :  If(10 > y, 1, 0)
+exp final sym_expr :  0 != If(10 > y, 1, 0)
+exp predtoz3 solver :  [0 != If(0 < y, 1, 0)]
+exp toz3 solver :  [0 != If(0 < y, 1, 0), Not(0 != If(10 > y, 1, 0))]
+zw3 toz3 asserts query :  [(> y#2, 0) (True)] (< y#2, 10) (True)
+zw3 toz3 z3_expr :  {'N': 32, 'z3_vars': {'y': y}}
+z3w res :  sat
+[1;31;40m z3w z3 getModel start !!!!!!!!!!!!!!!!!!!! [0m
+{'asserts': [(> y#2, 0) (True)], 'bound': 15, 'query': (< y#2, 10) (True), 'use_lia': True, 'solver': [0 != If(0 < y, 1, 0),
+ Not(0 != If(10 > y, 1, 0)),
+ And(15 >= y, 4294967280 <= y)], 'N': 32, 'z3_expr': <symbolic.z3_expr.bitvector.Z3BitVector object at 0x7f1850aceda0>}
+{'N': 32, 'z3_vars': {'y': y}}
+z3w model :  {'model': <Model object at 0x7f18507822f0>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w model.model {}
+z3w model.ctx {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w model.ctx.ctx {}
+z3w model.ctx.eh {}
+z3w name :  y
+z3w self.z3_expr.z3_vars[name] :  {'ast': <Ast object at 0x7f184cca86a8>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  10
+z3w res :  {'y': 10}
+[1;31;40m z3w z3 getModel end !!!!!!!!!!!!!!!!!!!! [0m
+z3w model :  {'y': 10}
+z3w flag a
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  {'y': 10}
+exp init expr :  1
+exp env :  {'y': 10}
+exp init expr :  ['>', 2, 0]
+exp init expr list :  <class 'list'>
+exp init op :  >
+>
+2
+0
+exp env :  {'y': 10}
+exp init expr :  2
+exp env :  {'y': 10}
+exp init expr :  0
+exp op :  >
+exp args :  [10, 0]
+exp init sym_expr :  True
+exp final sym_expr :  True
+exp predtoz3 solver :  [0 != If(0 < y, 1, 0), Not(0 != If(10 > y, 1, 0))]
+z3w flag not mismatch
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  {'y': 10}
+exp init expr :  1
+exp env :  {'y': 10}
+exp init expr :  ['<', 2, 10]
+exp init expr list :  <class 'list'>
+exp init op :  <
+<
+2
+10
+exp env :  {'y': 10}
+exp init expr :  2
+exp env :  {'y': 10}
+exp init expr :  10
+exp op :  <
+exp args :  [10, 10]
+exp init sym_expr :  False
+exp final sym_expr :  False
+exp predtoz3 solver :  [0 != If(0 < y, 1, 0), Not(0 != If(10 > y, 1, 0))]
+z3w tmp :  False
+z3w mismatch False
+[1;31;40m z3w findmodel2 end1 [0m
+z3w ret,mismatch :  (sat, False)
+[1;31;40m z3w z3 getModel start !!!!!!!!!!!!!!!!!!!! [0m
+{'asserts': [(> y#2, 0) (True)], 'bound': 15, 'query': (< y#2, 10) (True), 'use_lia': True, 'solver': [0 != If(0 < y, 1, 0), Not(0 != If(10 > y, 1, 0))], 'N': 32, 'z3_expr': <symbolic.z3_expr.bitvector.Z3BitVector object at 0x7f1850aceda0>}
+{'N': 32, 'z3_vars': {'y': y}}
+z3w model :  {'model': <Model object at 0x7f18507822f0>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w model.model {}
+z3w model.ctx {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w model.ctx.ctx {}
+z3w model.ctx.eh {}
+z3w name :  y
+z3w self.z3_expr.z3_vars[name] :  {'ast': <Ast object at 0x7f184cca86a8>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  10
+z3w res :  {'y': 10}
+[1;31;40m z3w z3 getModel end !!!!!!!!!!!!!!!!!!!! [0m
+z3w res1 :  {'y': 10}
+[1;32;40m z3w findmodel end [0m
+z3w flag 11111111111111111111111
+z3w Query -- (< y#2, 10) (True)
+z3w Asserts -- [(> y#2, 0) (True)]
+z3w Cone -- [(> y#2, 0) (True)]
+z3w Result -- {'y': 10}
+z3w res :  {'y': 10}
+z3w findCounterexample end
+epl asserts :  [(> y#2, 0) (True)]
+epl query :  (< y#2, 10) (True)
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+_oneExecution start !
+[1;31;40m [('y', 10), ('x', 0)] [0m
+epl oneexecution self.path :  {'constraints': {}, 'expected_path': [(< y#2, 10) (True), (> y#2, 0) (True)], 'add': <function ExplorationEngine.__init__.<locals>.<lambda> at 0x7f184cca81e0>, 'root_constraint': None (processed: False), 'current_constraint': None (processed: False)}
+epl oneexecution self.symbolic_inputs :  {'y': 10, 'x': 0}
+inv self.function :  {}
+inv args :  {'y': 10, 'x': 0}
+inv callfunction end1
+ldr self._entryPoint mod
+ldr args {'y': 10, 'x': 0}
+ldr self.app.__dict__[self.entryPoint] <function mod at 0x7f184cca8268>
+symty _do_sexpr
+symty _do_sexpr fun :  <function SymbolicObject.__gt__.<locals>.<lambda> at 0x7f18507822f0>
+symty _do_sexpr self :  {'name': 'y', 'val': 10, 'expr': None}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+ptc whichbranch start
+ptc branch :  True
+ptc symbolic_type :  1
+ptc p :  {'symtype': 1, 'result': True}
+ptc p.negate() :  {'symtype': 1, 'result': False}
+ptc p.negate().negate() :  (> y#10, 0) (True)
+ptc c :  (> y#2, 0) (True)  (processed: True, path_len: 1)
+ptc cneg :  (> y#0, 0) (False)  (processed: True, path_len: 1)
+symty _do_sexpr
+symty _do_sexpr fun :  <function SymbolicObject.__lt__.<locals>.<lambda> at 0x7f18507822f0>
+symty _do_sexpr self :  {'name': 'y', 'val': 10, 'expr': None}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+ptc whichbranch start
+ptc branch :  False
+ptc symbolic_type :  0
+ptc p :  {'symtype': 0, 'result': False}
+ptc p.negate() :  {'symtype': 0, 'result': True}
+ptc p.negate().negate() :  (< y#10, 10) (False)
+ptc c :  None
+ptc cneg :  (< y#2, 10) (True)  (processed: True, path_len: 2)
+ptc c is None
+New constraint: (< y#10, 10) (False)  (processed: False, path_len: 2)
+epl cjh constraint :  (< y#10, 10) (False)  (processed: False, path_len: 2)
+ldr tmp :  1
+inv tmp :  1
+[1;31;40m 1 [0m
+_oneExecution end !
+iterations :  3
+epl selected :  (== (% x#0, (+ y#2, 1)), 3) (False)  (processed: False, path_len: 3)
+epl CJH2
+epl Selected constraint (== (% x#0, (+ y#2, 1)), 3) (False)  (processed: False, path_len: 3)
+epl cjh2
+cst parent :  (< y#2, 10) (True)  (processed: True, path_len: 2)
+cst asserts :  [(< y#2, 10) (True), (> y#2, 0) (True)]
+cst predicate :  (== (% x#0, (+ y#2, 1)), 3) (False)
+z3w findCounterexample start
+[1;32;40m z3w findmodel start [0m
+z3w use_lia True
+exp self.__dict__ {'z3_vars': {}}
+z3w z3_expr :  {'z3_vars': {}}
+z3w asserts :  [(> y#2, 0) (True), (< y#2, 10) (True)]
+z3w query :  (== (% x#0, (+ y#2, 1)), 3) (False)
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  None
+exp init expr :  1
+exp env :  None
+exp init expr :  ['>', 2, 0]
+exp init expr list :  <class 'list'>
+exp init op :  >
+>
+2
+0
+exp env :  None
+exp init expr :  2
+exp name :  y
+z3int _variable
+exp name self._variable(name,solver) :  y
+z3int _variable
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  0
+z3int _constant
+exp op :  >
+exp args :  [y, 0]
+z3int _constant
+z3int _constant
+exp tmp== :  If(0 < y, 1, 0)
+exp init sym_expr :  If(0 < y, 1, 0)
+z3int _constant
+exp final sym_expr :  0 != If(0 < y, 1, 0)
+exp predtoz3 solver :  []
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  None
+exp init expr :  1
+exp env :  None
+exp init expr :  ['<', 2, 10]
+exp init expr list :  <class 'list'>
+exp init op :  <
+<
+2
+10
+exp env :  None
+exp init expr :  2
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  10
+z3int _constant
+exp op :  <
+exp args :  [y, 10]
+z3int _constant
+z3int _constant
+exp tmp== :  If(10 > y, 1, 0)
+exp init sym_expr :  If(10 > y, 1, 0)
+z3int _constant
+exp final sym_expr :  0 != If(10 > y, 1, 0)
+exp predtoz3 solver :  []
+exp pred :  {'symtype': 0, 'result': False}
+exp env :  None
+exp init expr :  0
+exp env :  None
+exp init expr :  ['==', ['%', 0, ['+', 2, 1]], 3]
+exp init expr list :  <class 'list'>
+exp init op :  ==
+==
+['%', 0, ['+', 2, 1]]
+3
+exp env :  None
+exp init expr :  ['%', 0, ['+', 2, 1]]
+exp init expr list :  <class 'list'>
+exp init op :  %
+%
+0
+['+', 2, 1]
+exp env :  None
+exp init expr :  0
+exp name :  x
+z3int _variable
+exp name self._variable(name,solver) :  x
+z3int _variable
+exp name self.z3_vars {'y': y, 'x': x}
+exp env :  None
+exp init expr :  ['+', 2, 1]
+exp init expr list :  <class 'list'>
+exp init op :  +
++
+2
+1
+exp env :  None
+exp init expr :  2
+exp name self.z3_vars {'y': y, 'x': x}
+exp env :  None
+exp init expr :  1
+z3int _constant
+exp op :  +
+exp args :  [y, 1]
+exp op :  %
+exp args :  [x, y + 1]
+z3int _mod
+exp env :  None
+exp init expr :  3
+z3int _constant
+exp op :  ==
+exp args :  [int_mod(x, y + 1), 3]
+exp env2 :  None
+z3int _constant
+z3int _constant
+exp tmp== :  If(3 == int_mod(x, y + 1), 1, 0)
+exp init sym_expr :  If(3 == int_mod(x, y + 1), 1, 0)
+z3int _constant
+exp final sym_expr :  Not(0 != If(3 == int_mod(x, y + 1), 1, 0))
+exp predtoz3 solver :  [0 != If(0 < y, 1, 0), 0 != If(10 > y, 1, 0)]
+exp toz3 solver :  [0 != If(0 < y, 1, 0),
+ 0 != If(10 > y, 1, 0),
+ Not(Not(0 != If(3 == int_mod(x, y + 1), 1, 0)))]
+z3w res :  sat
+[1;31;40m z3w findmodel2 start [0m
+[1;31;40m Z3BITVECTOR [0m
+exp self.__dict__ {'z3_vars': {}}
+zw3 z3bitvector z3_expr :  {'N': 32, 'z3_vars': {}}
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  None
+exp init expr :  1
+exp env :  None
+exp init expr :  ['>', 2, 0]
+exp init expr list :  <class 'list'>
+exp init op :  >
+>
+2
+0
+exp env :  None
+exp init expr :  2
+exp name :  y
+exp name self._variable(name,solver) :  y
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  0
+exp op :  >
+exp args :  [y, 0]
+exp tmp== :  If(0 < y, 1, 0)
+exp init sym_expr :  If(0 < y, 1, 0)
+exp final sym_expr :  0 != If(0 < y, 1, 0)
+exp predtoz3 solver :  []
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  None
+exp init expr :  1
+exp env :  None
+exp init expr :  ['<', 2, 10]
+exp init expr list :  <class 'list'>
+exp init op :  <
+<
+2
+10
+exp env :  None
+exp init expr :  2
+exp name self.z3_vars {'y': y}
+exp env :  None
+exp init expr :  10
+exp op :  <
+exp args :  [y, 10]
+exp tmp== :  If(10 > y, 1, 0)
+exp init sym_expr :  If(10 > y, 1, 0)
+exp final sym_expr :  0 != If(10 > y, 1, 0)
+exp predtoz3 solver :  []
+exp pred :  {'symtype': 0, 'result': False}
+exp env :  None
+exp init expr :  0
+exp env :  None
+exp init expr :  ['==', ['%', 0, ['+', 2, 1]], 3]
+exp init expr list :  <class 'list'>
+exp init op :  ==
+==
+['%', 0, ['+', 2, 1]]
+3
+exp env :  None
+exp init expr :  ['%', 0, ['+', 2, 1]]
+exp init expr list :  <class 'list'>
+exp init op :  %
+%
+0
+['+', 2, 1]
+exp env :  None
+exp init expr :  0
+exp name :  x
+exp name self._variable(name,solver) :  x
+exp name self.z3_vars {'y': y, 'x': x}
+exp env :  None
+exp init expr :  ['+', 2, 1]
+exp init expr list :  <class 'list'>
+exp init op :  +
++
+2
+1
+exp env :  None
+exp init expr :  2
+exp name self.z3_vars {'y': y, 'x': x}
+exp env :  None
+exp init expr :  1
+exp op :  +
+exp args :  [y, 1]
+exp op :  %
+exp args :  [x, y + 1]
+exp _mod
+exp env :  None
+exp init expr :  3
+exp op :  ==
+exp args :  [x%(y + 1), 3]
+exp env2 :  None
+exp tmp== :  If(3 == x%(y + 1), 1, 0)
+exp init sym_expr :  If(3 == x%(y + 1), 1, 0)
+exp final sym_expr :  Not(0 != If(3 == x%(y + 1), 1, 0))
+exp predtoz3 solver :  [0 != If(0 < y, 1, 0), 0 != If(10 > y, 1, 0)]
+exp toz3 solver :  [0 != If(0 < y, 1, 0),
+ 0 != If(10 > y, 1, 0),
+ Not(Not(0 != If(3 == x%(y + 1), 1, 0)))]
+zw3 toz3 asserts query :  [(> y#2, 0) (True), (< y#2, 10) (True)] (== (% x#0, (+ y#2, 1)), 3) (False)
+zw3 toz3 z3_expr :  {'N': 32, 'z3_vars': {'y': y, 'x': x}}
+z3w res :  sat
+[1;31;40m z3w z3 getModel start !!!!!!!!!!!!!!!!!!!! [0m
+{'asserts': [(> y#2, 0) (True), (< y#2, 10) (True)], 'bound': 15, 'query': (== (% x#0, (+ y#2, 1)), 3) (False), 'use_lia': True, 'solver': [0 != If(0 < y, 1, 0),
+ 0 != If(10 > y, 1, 0),
+ Not(Not(0 != If(3 == x%(y + 1), 1, 0))),
+ And(15 >= y, 15 >= x, 4294967280 <= y, 4294967280 <= x)], 'N': 32, 'z3_expr': <symbolic.z3_expr.bitvector.Z3BitVector object at 0x7f184ccb0978>}
+{'N': 32, 'z3_vars': {'y': y, 'x': x}}
+z3w model :  {'model': <Model object at 0x7f1852166048>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w model.model {}
+z3w model.ctx {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w model.ctx.ctx {}
+z3w model.ctx.eh {}
+z3w name :  y
+z3w self.z3_expr.z3_vars[name] :  {'ast': <Ast object at 0x7f184cca87b8>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  8
+z3w name :  x
+z3w self.z3_expr.z3_vars[name] :  {'ast': <Ast object at 0x7f184cca8048>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  12
+z3w res :  {'y': 8, 'x': 12}
+[1;31;40m z3w z3 getModel end !!!!!!!!!!!!!!!!!!!! [0m
+z3w model :  {'y': 8, 'x': 12}
+z3w flag a
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  1
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  ['>', 2, 0]
+exp init expr list :  <class 'list'>
+exp init op :  >
+>
+2
+0
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  2
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  0
+exp op :  >
+exp args :  [8, 0]
+exp init sym_expr :  True
+exp final sym_expr :  True
+exp predtoz3 solver :  [0 != If(0 < y, 1, 0),
+ 0 != If(10 > y, 1, 0),
+ Not(Not(0 != If(3 == x%(y + 1), 1, 0)))]
+z3w flag a
+exp pred :  {'symtype': 1, 'result': True}
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  1
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  ['<', 2, 10]
+exp init expr list :  <class 'list'>
+exp init op :  <
+<
+2
+10
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  2
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  10
+exp op :  <
+exp args :  [8, 10]
+exp init sym_expr :  True
+exp final sym_expr :  True
+exp predtoz3 solver :  [0 != If(0 < y, 1, 0),
+ 0 != If(10 > y, 1, 0),
+ Not(Not(0 != If(3 == x%(y + 1), 1, 0)))]
+z3w flag not mismatch
+exp pred :  {'symtype': 0, 'result': False}
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  0
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  ['==', ['%', 0, ['+', 2, 1]], 3]
+exp init expr list :  <class 'list'>
+exp init op :  ==
+==
+['%', 0, ['+', 2, 1]]
+3
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  ['%', 0, ['+', 2, 1]]
+exp init expr list :  <class 'list'>
+exp init op :  %
+%
+0
+['+', 2, 1]
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  0
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  ['+', 2, 1]
+exp init expr list :  <class 'list'>
+exp init op :  +
++
+2
+1
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  2
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  1
+exp op :  +
+exp args :  [8, 1]
+exp op :  %
+exp args :  [12, 9]
+exp _mod
+exp env :  {'y': 8, 'x': 12}
+exp init expr :  3
+exp op :  ==
+exp args :  [3, 3]
+exp env2 :  {'y': 8, 'x': 12}
+exp init sym_expr :  True
+exp final sym_expr :  False
+exp predtoz3 solver :  [0 != If(0 < y, 1, 0),
+ 0 != If(10 > y, 1, 0),
+ Not(Not(0 != If(3 == x%(y + 1), 1, 0)))]
+z3w tmp :  False
+z3w mismatch False
+[1;31;40m z3w findmodel2 end1 [0m
+z3w ret,mismatch :  (sat, False)
+[1;31;40m z3w z3 getModel start !!!!!!!!!!!!!!!!!!!! [0m
+{'asserts': [(> y#2, 0) (True), (< y#2, 10) (True)], 'bound': 15, 'query': (== (% x#0, (+ y#2, 1)), 3) (False), 'use_lia': True, 'solver': [0 != If(0 < y, 1, 0),
+ 0 != If(10 > y, 1, 0),
+ Not(Not(0 != If(3 == x%(y + 1), 1, 0)))], 'N': 32, 'z3_expr': <symbolic.z3_expr.bitvector.Z3BitVector object at 0x7f184ccb0978>}
+{'N': 32, 'z3_vars': {'y': y, 'x': x}}
+z3w model :  {'model': <Model object at 0x7f1852166048>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w model.model {}
+z3w model.ctx {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w model.ctx.ctx {}
+z3w model.ctx.eh {}
+z3w name :  y
+z3w self.z3_expr.z3_vars[name] :  {'ast': <Ast object at 0x7f184cca87b8>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  8
+z3w name :  x
+z3w self.z3_expr.z3_vars[name] :  {'ast': <Ast object at 0x7f184cca8048>, 'ctx': <z3.z3.Context object at 0x7f184ccb0278>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f184cca8400>, 'eh': <CFunctionType object at 0x7f184ccb4110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  12
+z3w res :  {'y': 8, 'x': 12}
+[1;31;40m z3w z3 getModel end !!!!!!!!!!!!!!!!!!!! [0m
+z3w res1 :  {'y': 8, 'x': 12}
+[1;32;40m z3w findmodel end [0m
+z3w flag 11111111111111111111111
+z3w Query -- (== (% x#0, (+ y#2, 1)), 3) (False)
+z3w Asserts -- [(< y#2, 10) (True), (> y#2, 0) (True)]
+z3w Cone -- [(> y#2, 0) (True), (< y#2, 10) (True)]
+z3w Result -- {'y': 8, 'x': 12}
+z3w res :  {'y': 8, 'x': 12}
+z3w findCounterexample end
+epl asserts :  [(< y#2, 10) (True), (> y#2, 0) (True)]
+epl query :  (== (% x#0, (+ y#2, 1)), 3) (False)
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+_oneExecution start !
+[1;31;40m [('y', 8), ('x', 12)] [0m
+epl oneexecution self.path :  {'constraints': {}, 'expected_path': [(== (% x#0, (+ y#2, 1)), 3) (False), (< y#2, 10) (True), (> y#2, 0) (True)], 'add': <function ExplorationEngine.__init__.<locals>.<lambda> at 0x7f184cca81e0>, 'root_constraint': None (processed: False), 'current_constraint': None (processed: False)}
+epl oneexecution self.symbolic_inputs :  {'y': 8, 'x': 12}
+inv self.function :  {}
+inv args :  {'y': 8, 'x': 12}
+inv callfunction end1
+ldr self._entryPoint mod
+ldr args {'y': 8, 'x': 12}
+ldr self.app.__dict__[self.entryPoint] <function mod at 0x7f184cca8b70>
+symty _do_sexpr
+symty _do_sexpr fun :  <function SymbolicObject.__gt__.<locals>.<lambda> at 0x7f1852166048>
+symty _do_sexpr self :  {'name': 'y', 'val': 8, 'expr': None}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+ptc whichbranch start
+ptc branch :  True
+ptc symbolic_type :  1
+ptc p :  {'symtype': 1, 'result': True}
+ptc p.negate() :  {'symtype': 1, 'result': False}
+ptc p.negate().negate() :  (> y#8, 0) (True)
+ptc c :  (> y#2, 0) (True)  (processed: True, path_len: 1)
+ptc cneg :  (> y#0, 0) (False)  (processed: True, path_len: 1)
+symty _do_sexpr
+symty _do_sexpr fun :  <function SymbolicObject.__lt__.<locals>.<lambda> at 0x7f1852166048>
+symty _do_sexpr self :  {'name': 'y', 'val': 8, 'expr': None}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+ptc whichbranch start
+ptc branch :  True
+ptc symbolic_type :  1
+ptc p :  {'symtype': 1, 'result': True}
+ptc p.negate() :  {'symtype': 1, 'result': False}
+ptc p.negate().negate() :  (< y#8, 10) (True)
+ptc c :  (< y#2, 10) (True)  (processed: True, path_len: 2)
+ptc cneg :  (< y#10, 10) (False)  (processed: True, path_len: 2)
+symty _do_sexpr
+symty _do_sexpr fun :  <function __add__.<locals>.<lambda> at 0x7f1852166048>
+symty _do_sexpr self :  {'name': 'y', 'val': 8, 'expr': None}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+symty _do_sexpr
+symty _do_sexpr fun :  <function __mod__.<locals>.<lambda> at 0x7f1852166048>
+symty _do_sexpr self :  {'name': 'x', 'val': 12, 'expr': None}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+symty _do_sexpr
+symty _do_sexpr fun :  <function SymbolicObject.__eq__.<locals>.<lambda> at 0x7f1852166048>
+symty _do_sexpr self :  {'name': 'se', 'val': 3, 'expr': ['%', 12, ['+', 8, 1]]}
+symty _do_sexpr 4
+symty _do_sexpr 2
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+ptc whichbranch start
+ptc branch :  True
+ptc symbolic_type :  1
+ptc p :  {'symtype': 1, 'result': True}
+ptc p.negate() :  {'symtype': 1, 'result': False}
+ptc p.negate().negate() :  (== (% x#12, (+ y#8, 1)), 3) (True)
+ptc c :  None
+ptc cneg :  (== (% x#0, (+ y#2, 1)), 3) (False)  (processed: True, path_len: 3)
+ptc c is None
+New constraint: (== (% x#12, (+ y#8, 1)), 3) (True)  (processed: False, path_len: 3)
+epl cjh constraint :  (== (% x#12, (+ y#8, 1)), 3) (True)  (processed: False, path_len: 3)
+ldr tmp :  0
+inv tmp :  0
+[1;31;40m 0 [0m
+_oneExecution end !
+iterations :  4
+epl selected :  (< y#10, 10) (False)  (processed: True, path_len: 2)
+epl selected :  (== (% x#12, (+ y#8, 1)), 3) (True)  (processed: True, path_len: 3)
+epl explore() end !
+py3 CJH1
+[[('y', 0), ('x', 0)], [('y', 2), ('x', 0)], [('y', 10), ('x', 0)], [('y', 8), ('x', 12)]]
+[1, 1, 1, 0]
+{'constraints': {}, 'expected_path': [], 'add': <function ExplorationEngine.__init__.<locals>.<lambda> at 0x7f184cca81e0>, 'root_constraint': None (processed: False), 'current_constraint': (== (% x#12, (+ y#8, 1)), 3) (True) (processed: True)
+  path: (< y#2, 10) (True) (processed: True)
+  path: (> y#2, 0) (True) (processed: True)
+  path: None (processed: False)}
+py3 CJH11
+mod test passed <---

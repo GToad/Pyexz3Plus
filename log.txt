@@ -1,0 +1,298 @@
+ldr builtins.len 1
+ldr builtins.len !
+PyExZ3 (Python Exploration with Z3)
+Exploring andor.andor
+ldr self :  {'_entryPoint': 'andor', 'app': <module 'andor' from '/mnt/hgfs/PyExZ3P/test/andor.py'>, '_fileName': 'andor'}
+ldr argspec :  ArgSpec(args=['x', 'y'], varargs=None, keywords=None, defaults=None)
+ldr _initializeArgumentSymbolic ok
+ldr _initializeArgumentSymbolic ok
+epl funcinv :  {'reset': <bound method Loader._resetCallback of <symbolic.loader.Loader object at 0x7f7672d3e518>>, 'arg_constructor': {'x': <function Loader._initializeArgumentSymbolic.<locals>.<lambda> at 0x7f7678203048>, 'y': <function Loader._initializeArgumentSymbolic.<locals>.<lambda> at 0x7f7672d41158>}, 'initial_value': {'x': 0, 'y': 0}, 'function': <bound method Loader._execute of <symbolic.loader.Loader object at 0x7f7672d3e518>>}
+epl n :  x
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+epl self.symbolic_inputs[n] :  0
+epl n :  y
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+epl self.symbolic_inputs[n] :  0
+epl self.path :  {'root_constraint': None (processed: False), 'add': <function ExplorationEngine.__init__.<locals>.<lambda> at 0x7f7672d411e0>, 'expected_path': None, 'constraints': {}, 'current_constraint': None (processed: False)}
+[1;31;40m [('x', 0), ('y', 0)] [0m
+epl oneexecution self.path :  {'root_constraint': None (processed: False), 'add': <function ExplorationEngine.__init__.<locals>.<lambda> at 0x7f7672d411e0>, 'expected_path': None, 'constraints': {}, 'current_constraint': None (processed: False)}
+epl oneexecution self.symbolic_inputs :  {'x': 0, 'y': 0}
+inv self.function :  {}
+inv args :  {'x': 0, 'y': 0}
+inv callfunction end1
+ldr self._entryPoint andor
+ldr args {'x': 0, 'y': 0}
+ldr self.app.__dict__[self.entryPoint] <function andor at 0x7f7672d412f0>
+ptc whichbranch start
+ptc branch :  False
+ptc symbolic_type :  0
+ptc p :  {'result': False, 'symtype': 0}
+ptc p.negate() :  {'result': True, 'symtype': 0}
+ptc p.negate().negate() :  x#0 (False)
+ptc c :  None
+ptc cneg :  None
+ptc c is None
+New constraint: x#0 (False)  (processed: False, path_len: 1)
+epl cjh constraint :  x#0 (False)  (processed: False, path_len: 1)
+ptc whichbranch start
+ptc branch :  False
+ptc symbolic_type :  0
+ptc p :  {'result': False, 'symtype': 0}
+ptc p.negate() :  {'result': True, 'symtype': 0}
+ptc p.negate().negate() :  y#0 (False)
+ptc c :  None
+ptc cneg :  None
+ptc c is None
+New constraint: y#0 (False)  (processed: False, path_len: 2)
+epl cjh constraint :  y#0 (False)  (processed: False, path_len: 2)
+ldr tmp :  2
+inv tmp :  2
+[1;31;40m 2 [0m
+epl selected :  x#0 (False)  (processed: False, path_len: 1)
+epl CJH2
+epl Selected constraint x#0 (False)  (processed: False, path_len: 1)
+epl cjh2
+cst parent :  None  (processed: False, path_len: 0)
+cst asserts :  []
+cst predicate :  x#0 (False)
+z3w findCounterexample start
+[1;32;40m z3w findmodel start [0m
+z3w use_lia True
+z3w z3_expr :  {'z3_vars': {}}
+z3w asserts :  []
+z3w query :  x#0 (False)
+z3w pred :  {'result': False, 'symtype': 0}
+exp env :  None
+exp init expr :  0
+exp init sym_expr :  x
+exp final sym_expr :  Not(0 != x)
+exp predtoz3 solver :  []
+exp toz3 solver :  [Not(Not(0 != x))]
+z3w res :  sat
+[1;31;40m z3w findmodel2 start [0m
+[1;31;40m Z3BITVECTOR [0m
+zw3 z3bitvector z3_expr :  {'N': 32, 'z3_vars': {}}
+z3w pred :  {'result': False, 'symtype': 0}
+exp env :  None
+exp init expr :  0
+exp init sym_expr :  x
+exp final sym_expr :  Not(0 != x)
+exp predtoz3 solver :  []
+exp toz3 solver :  [Not(Not(0 != x))]
+zw3 toz3 asserts query :  [] x#0 (False)
+zw3 toz3 z3_expr :  {'N': 32, 'z3_vars': {'x': x}}
+z3w res :  sat
+[1;31;40m z3w z3 getModel start !!!!!!!!!!!!!!!!!!!! [0m
+{'solver': [Not(Not(0 != x)), And(15 >= x, 4294967280 <= x)], 'z3_expr': <symbolic.z3_expr.bitvector.Z3BitVector object at 0x7f7672d495f8>, 'bound': 15, 'asserts': [], 'N': 32, 'use_lia': True, 'query': x#0 (False)}
+{'N': 32, 'z3_vars': {'x': x}}
+z3w model :  {'ctx': <z3.z3.Context object at 0x7f7672d49048>, 'model': <Model object at 0x7f767681e378>}
+z3w model.ctx {'ctx': <ContextObj object at 0x7f7672d41378>, 'eh': <CFunctionType object at 0x7f7672d4b110>}
+z3w model.ctx.ctx {}
+z3w model.ctx.eh {}
+z3w name :  x
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <z3.z3.Context object at 0x7f7672d49048>, 'ast': <Ast object at 0x7f7672d41400>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f7672d41378>, 'eh': <CFunctionType object at 0x7f7672d4b110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  2
+z3w res :  {'x': 2}
+[1;31;40m z3w z3 getModel end !!!!!!!!!!!!!!!!!!!! [0m
+z3w model :  {'x': 2}
+z3w pred :  {'result': False, 'symtype': 0}
+exp env :  {'x': 2}
+exp init expr :  0
+exp init sym_expr :  2
+exp final sym_expr :  False
+exp predtoz3 solver :  [Not(Not(0 != x))]
+[1;31;40m z3w findmodel2 end1 [0m
+z3w ret,mismatch :  (sat, False)
+[1;31;40m z3w z3 getModel start !!!!!!!!!!!!!!!!!!!! [0m
+{'solver': [Not(Not(0 != x))], 'z3_expr': <symbolic.z3_expr.bitvector.Z3BitVector object at 0x7f7672d495f8>, 'bound': 15, 'asserts': [], 'N': 32, 'use_lia': True, 'query': x#0 (False)}
+{'N': 32, 'z3_vars': {'x': x}}
+z3w model :  {'ctx': <z3.z3.Context object at 0x7f7672d49048>, 'model': <Model object at 0x7f767681e378>}
+z3w model.ctx {'ctx': <ContextObj object at 0x7f7672d41378>, 'eh': <CFunctionType object at 0x7f7672d4b110>}
+z3w model.ctx.ctx {}
+z3w model.ctx.eh {}
+z3w name :  x
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <z3.z3.Context object at 0x7f7672d49048>, 'ast': <Ast object at 0x7f7672d41400>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f7672d41378>, 'eh': <CFunctionType object at 0x7f7672d4b110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  2
+z3w res :  {'x': 2}
+[1;31;40m z3w z3 getModel end !!!!!!!!!!!!!!!!!!!! [0m
+z3w res1 :  {'x': 2}
+[1;32;40m z3w findmodel end [0m
+z3w flag 11111111111111111111111
+z3w Query -- x#0 (False)
+z3w Asserts -- []
+z3w Cone -- []
+z3w Result -- {'x': 2}
+z3w res :  {'x': 2}
+z3w findCounterexample end
+epl asserts :  []
+epl query :  x#0 (False)
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+[1;31;40m [('x', 2), ('y', 0)] [0m
+epl oneexecution self.path :  {'root_constraint': None (processed: False), 'add': <function ExplorationEngine.__init__.<locals>.<lambda> at 0x7f7672d411e0>, 'expected_path': [x#0 (False)], 'constraints': {}, 'current_constraint': None (processed: False)}
+epl oneexecution self.symbolic_inputs :  {'x': 2, 'y': 0}
+inv self.function :  {}
+inv args :  {'x': 2, 'y': 0}
+inv callfunction end1
+ldr self._entryPoint andor
+ldr args {'x': 2, 'y': 0}
+ldr self.app.__dict__[self.entryPoint] <function andor at 0x7f7672d41730>
+ptc whichbranch start
+ptc branch :  True
+ptc symbolic_type :  2
+ptc p :  {'result': True, 'symtype': 2}
+ptc p.negate() :  {'result': False, 'symtype': 2}
+ptc p.negate().negate() :  x#2 (True)
+ptc c :  None
+ptc cneg :  x#0 (False)  (processed: True, path_len: 1)
+ptc c is None
+New constraint: x#2 (True)  (processed: False, path_len: 1)
+epl cjh constraint :  x#2 (True)  (processed: False, path_len: 1)
+ldr tmp :  1
+inv tmp :  1
+[1;31;40m 1 [0m
+iterations :  2
+epl selected :  y#0 (False)  (processed: False, path_len: 2)
+epl CJH2
+epl Selected constraint y#0 (False)  (processed: False, path_len: 2)
+epl cjh2
+cst parent :  x#0 (False)  (processed: True, path_len: 1)
+cst asserts :  [x#0 (False)]
+cst predicate :  y#0 (False)
+z3w findCounterexample start
+[1;32;40m z3w findmodel start [0m
+z3w use_lia True
+z3w z3_expr :  {'z3_vars': {}}
+z3w asserts :  []
+z3w query :  y#0 (False)
+z3w pred :  {'result': False, 'symtype': 0}
+exp env :  None
+exp init expr :  0
+exp init sym_expr :  y
+exp final sym_expr :  Not(0 != y)
+exp predtoz3 solver :  []
+exp toz3 solver :  [Not(Not(0 != y))]
+z3w res :  sat
+[1;31;40m z3w findmodel2 start [0m
+[1;31;40m Z3BITVECTOR [0m
+zw3 z3bitvector z3_expr :  {'N': 32, 'z3_vars': {}}
+z3w pred :  {'result': False, 'symtype': 0}
+exp env :  None
+exp init expr :  0
+exp init sym_expr :  y
+exp final sym_expr :  Not(0 != y)
+exp predtoz3 solver :  []
+exp toz3 solver :  [Not(Not(0 != y))]
+zw3 toz3 asserts query :  [] y#0 (False)
+zw3 toz3 z3_expr :  {'N': 32, 'z3_vars': {'y': y}}
+z3w res :  sat
+[1;31;40m z3w z3 getModel start !!!!!!!!!!!!!!!!!!!! [0m
+{'solver': [Not(Not(0 != y)), And(15 >= y, 4294967280 <= y)], 'z3_expr': <symbolic.z3_expr.bitvector.Z3BitVector object at 0x7f7672d49dd8>, 'bound': 15, 'asserts': [], 'N': 32, 'use_lia': True, 'query': y#0 (False)}
+{'N': 32, 'z3_vars': {'y': y}}
+z3w model :  {'ctx': <z3.z3.Context object at 0x7f7672d49048>, 'model': <Model object at 0x7f7672d41840>}
+z3w model.ctx {'ctx': <ContextObj object at 0x7f7672d41378>, 'eh': <CFunctionType object at 0x7f7672d4b110>}
+z3w model.ctx.ctx {}
+z3w model.ctx.eh {}
+z3w name :  y
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <z3.z3.Context object at 0x7f7672d49048>, 'ast': <Ast object at 0x7f7672d41400>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f7672d41378>, 'eh': <CFunctionType object at 0x7f7672d4b110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  2
+z3w res :  {'y': 2}
+[1;31;40m z3w z3 getModel end !!!!!!!!!!!!!!!!!!!! [0m
+z3w model :  {'y': 2}
+z3w pred :  {'result': False, 'symtype': 0}
+exp env :  {'y': 2}
+exp init expr :  0
+exp init sym_expr :  2
+exp final sym_expr :  False
+exp predtoz3 solver :  [Not(Not(0 != y))]
+[1;31;40m z3w findmodel2 end1 [0m
+z3w ret,mismatch :  (sat, False)
+[1;31;40m z3w z3 getModel start !!!!!!!!!!!!!!!!!!!! [0m
+{'solver': [Not(Not(0 != y))], 'z3_expr': <symbolic.z3_expr.bitvector.Z3BitVector object at 0x7f7672d49dd8>, 'bound': 15, 'asserts': [], 'N': 32, 'use_lia': True, 'query': y#0 (False)}
+{'N': 32, 'z3_vars': {'y': y}}
+z3w model :  {'ctx': <z3.z3.Context object at 0x7f7672d49048>, 'model': <Model object at 0x7f7672d41268>}
+z3w model.ctx {'ctx': <ContextObj object at 0x7f7672d41378>, 'eh': <CFunctionType object at 0x7f7672d4b110>}
+z3w model.ctx.ctx {}
+z3w model.ctx.eh {}
+z3w name :  y
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <z3.z3.Context object at 0x7f7672d49048>, 'ast': <Ast object at 0x7f7672d41400>}
+z3w self.z3_expr.z3_vars[name] :  {'ctx': <ContextObj object at 0x7f7672d41378>, 'eh': <CFunctionType object at 0x7f7672d4b110>}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w self.z3_expr.z3_vars[name] :  {}
+z3w ce :  2
+z3w res :  {'y': 2}
+[1;31;40m z3w z3 getModel end !!!!!!!!!!!!!!!!!!!! [0m
+z3w res1 :  {'y': 2}
+[1;32;40m z3w findmodel end [0m
+z3w flag 11111111111111111111111
+z3w Query -- y#0 (False)
+z3w Asserts -- [x#0 (False)]
+z3w Cone -- []
+z3w Result -- {'y': 2}
+z3w res :  {'y': 2}
+z3w findCounterexample end
+epl asserts :  [x#0 (False)]
+epl query :  y#0 (False)
+[1;33;40m int [0m
+[1;33;40m int [0m
+[1;33;40m type [0m
+[1;31;40m [('x', 0), ('y', 2)] [0m
+epl oneexecution self.path :  {'root_constraint': None (processed: False), 'add': <function ExplorationEngine.__init__.<locals>.<lambda> at 0x7f7672d411e0>, 'expected_path': [y#0 (False), x#0 (False)], 'constraints': {}, 'current_constraint': None (processed: False)}
+epl oneexecution self.symbolic_inputs :  {'x': 0, 'y': 2}
+inv self.function :  {}
+inv args :  {'x': 0, 'y': 2}
+inv callfunction end1
+ldr self._entryPoint andor
+ldr args {'x': 0, 'y': 2}
+ldr self.app.__dict__[self.entryPoint] <function andor at 0x7f7672d41488>
+ptc whichbranch start
+ptc branch :  False
+ptc symbolic_type :  0
+ptc p :  {'result': False, 'symtype': 0}
+ptc p.negate() :  {'result': True, 'symtype': 0}
+ptc p.negate().negate() :  x#0 (False)
+ptc c :  x#0 (False)  (processed: True, path_len: 1)
+ptc cneg :  x#2 (True)  (processed: True, path_len: 1)
+ptc whichbranch start
+ptc branch :  True
+ptc symbolic_type :  2
+ptc p :  {'result': True, 'symtype': 2}
+ptc p.negate() :  {'result': False, 'symtype': 2}
+ptc p.negate().negate() :  y#2 (True)
+ptc c :  None
+ptc cneg :  y#0 (False)  (processed: True, path_len: 2)
+ptc c is None
+New constraint: y#2 (True)  (processed: False, path_len: 2)
+epl cjh constraint :  y#2 (True)  (processed: False, path_len: 2)
+ldr tmp :  1
+inv tmp :  1
+[1;31;40m 1 [0m
+iterations :  3
+epl selected :  x#2 (True)  (processed: True, path_len: 1)
+epl selected :  y#2 (True)  (processed: True, path_len: 2)
+py3 CJH1
+[[('x', 0), ('y', 0)], [('x', 2), ('y', 0)], [('x', 0), ('y', 2)]]
+[2, 1, 1]
+{'root_constraint': None (processed: False), 'add': <function ExplorationEngine.__init__.<locals>.<lambda> at 0x7f7672d411e0>, 'expected_path': [], 'constraints': {}, 'current_constraint': y#2 (True) (processed: True)
+  path: x#0 (False) (processed: True)
+  path: None (processed: False)}
+py3 CJH11
+andor.py contains no expected_result function
